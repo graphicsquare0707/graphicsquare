@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>作業時間記録</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<center>
+<div class="container">
+
+    <h1>作業時間記録アプリ</h1>
+
+    <article>
+        <div class="custom-background">
+            <p><img id="kiritanpo" src="./img/food_kiritanpo.png" alt="きりたんぽです" width="100px"></p>
+            <p id="pointxt">0P</p>
+            <p><img id="kiritanpo_moto" src="./img/food_komeko.png" alt="きりたんぽのもとです" width="100px"></p>
+            <p id="pointxt02">0P</p>
+        </div>
+        <p><img id="clickImage" src="./img/kiri_sleep.jpg" alt="きりたんです" width="330px"></p>
+    </article>
+
+    <button id="start" class="pop-button">スタート</button>
+    <button id="stop" class="pop-button">ストップ</button>
+
+    <br><br>
+
+    <p>作業時間: <span id="timer">00:00</span> <span id="data01">_____________</span></p>
+
+    <br><br>
+
+
+	<div class="custom-background02">
+    <article>
+        <audio type="audio/mpeg" src="./music/kiri_count_02.mp3" id="myAudio" controls=""></audio>
+        <h2>きりたん　ポモドーロタイマー</h2>
+    </article>
+	</div>
+
+
+    <br><br>
+
+	<div class="custom-background02">
+	    <p>過去の作業記録</p>
+	    <div id="data"></div>
+		<button id="save">保存データ出力</button>
+		<button id="load">保存データ読み込み</button><br><br>
+	    <button id="export">保存データを出力し、データを削除する</button>
+
+		<br><br><br><br>
+		
+	</div>
+
+</div>
+</center>
+
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

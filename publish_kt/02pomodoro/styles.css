@@ -1,0 +1,74 @@
+
+  /* タグの背景色を変更、枠線のCSS */
+  .custom-background {
+    background-color: white; /* 背景色を指定 */
+    width: 340px; /* 横幅を300ピクセルに指定 */
+
+    border: 4px solid lightblue; /* 境界線のスタイルを指定 */
+    padding: 0px; /* コンテンツと境界線の間の余白を指定 */
+    border-radius: 70px; /* 丸みを帯びた境界線を指定 */
+  }
+
+
+  /* タグの背景色を変更するためのCSS */
+  .custom-background02 {
+    background-color: #FFFFDD; /* 背景色を指定 */
+    width: 350px; /* 横幅を300ピクセルに指定 */
+
+    padding: 0px; /* コンテンツと境界線の間の余白を指定 */
+  }
+
+
+  /* ボタンのスタイル */
+  .pop-button {
+    background-color: #03809c; /* ボタンの背景色 */
+    border: none;
+    color: white; /* ボタンのテキスト色 */
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* ボタンの丸みを付ける */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加する */
+    transition: box-shadow 0.3s; /* ホバーエフェクトのアニメーション */
+  }
+
+  /* ボタンにホバーエフェクトを追加 */
+  .pop-button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ホバー時の影を変更 */
+  }
+  
+  
+
+@media screen and (max-width: 400px) { 
+    /*　画面サイズ まで適用　*/
+.container {
+	width: 375px;
+
+}
+  
+
+  }
+  @media screen and (min-width: 500px) and (max-width: 999px) {
+
+.container {
+	width: 375px;
+}
+
+  }
+  @media screen and (min-width:1000px) {
+
+.container {
+	width: 375px;
+}
+
+  }
+  
+
+ /* 横方向のスクロールバーを非表示にする */
+body {
+    overflow-x: hidden; /* 横方向のスクロールバーを非表示にする */
+}
+
+
