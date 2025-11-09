@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/vue/',  // SPAを /vue/ 配下で公開する
+  base: './',  // ← ここを追加（相対パス）
   build: {
     outDir: 'dist'
   }
