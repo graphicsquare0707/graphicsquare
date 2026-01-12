@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>トレーニングモード開始</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    label { display: block; margin-top: 15px; }
+    button {
+      margin-top: 25px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>トレーニングモード</h2>
+
+  <label>
+    日付：
+    <input type="date" id="dateInput" value="2021-09-24">
+  </label>
+
+  <label>
+    時刻（時）：
+    <select id="hourInput"></select>
+  </label>
+
+  <button id="goButton">開始する</button>
+
+  <script>
+    // 時間プルダウンを生成
+    const hourSelect = document.getElementById("hourInput");
+    for (let h = 0; h < 24; h++) {
+      const opt = document.createElement("option");
+      opt.value = String(h).padStart(2, "0") + ":00";
+      opt.textContent = opt.value;
+      hourSelect.appendChild(opt);
+    }
+
+    // 初期時刻（お好みで調整可）：00:00
+    hourSelect.value = "00:00";
+
+    document.getElementById("goButton").onclick = function() {
+      const date = document.getElementById("dateInput").value;
+      const time = document.getElementById("hourInput").value;
+
+      if (!date) {
+        alert("日付を選んでください");
+        return;
+      }
+
+      // yyyy-mm-dd-HH:MM:00 に変換
+      const dateParam = date + "-" + time + ":00";
+
+      // ↓ ここをあなたの Vue ページのパスにする
+      //const targetUrl = "../interface_vue/index.html?date=" + dateParam;
+	  //const targetUrl = "../interface_vue/index.html?mode=login&site=dummy1&lang=ja_JP&date=" + dateParam;
+	  //const targetUrl = "http://localhost:5173/??mode=login&site=dummy1&lang=ja_JP&date=" + dateParam;
+		const targetUrl = "html/interface/index.html?mode=login&site=dummy1&lang=ja_JP&date=" + dateParam;
+
+
+      location.href = targetUrl;
+    };
+  </script>
+
+</body>
+</html>
